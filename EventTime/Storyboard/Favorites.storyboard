@@ -52,6 +52,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="favoritesTableView" destination="221-3V-S3u" id="IN4-bV-5KX"/>
+                        <outlet property="signoutButton" destination="FnE-G4-VKP" id="wke-0v-KYf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpg-o6-GM0" userLabel="First Responder" sceneMemberID="firstResponder"/>

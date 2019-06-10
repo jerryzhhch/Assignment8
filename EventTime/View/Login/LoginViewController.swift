@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var googleButton: GIDSignInButton!
-    @IBOutlet weak var facebookSignInButton: FBLoginButton!
+    @IBOutlet weak var facebookButton: FBLoginButton!
     
     let images = [Int](0...Constants.Values.imageCount.rawValue).map({String($0)})
     var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
@@ -97,17 +97,19 @@ class LoginViewController: UIViewController {
         pageControl.numberOfPages = images.count
         scrollView.delegate = self
         googleButton.layer.cornerRadius = googleButton.layer.frame.height / 2
-        facebookSignInButton.layer.cornerRadius = googleButton.layer.frame.height / 2
+        facebookButton.layer.cornerRadius = googleButton.layer.frame.height / 2
         
         GIDSignIn.sharedInstance()?.uiDelegate = self
         GIDSignIn.sharedInstance()?.delegate = self
         
-        let fbButton = FBLoginButton()
-        view.addSubview(fbButton)
-        fbButton.frame = CGRect(x: 90, y: view.frame.maxY - 200, width: 230, height: 40)
-        fbButton.delegate = self
-        fbButton.layer.cornerRadius = googleButton.layer.frame.height / 2
-//        facebookSignInButton.delegate = self
+//        let fbButton = FBLoginButton()
+//        view.addSubview(fbButton)
+//        fbButton.frame = CGRect(x: 90, y: view.frame.maxY - 200, width: 230, height: 40)
+//        fbButton.delegate = self
+//        fbButton.layer.cornerRadius = googleButton.layer.frame.height / 2
+        
+        facebookButton.frame = CGRect(x: 90, y: 607, width: 195, height: 40)
+        facebookButton.delegate = self
     }
     
 }

@@ -8,9 +8,11 @@
 
 import UIKit
 import FirebaseAuth
+import FBSDKLoginKit
 
 class FavoritesViewController: UIViewController {
 
+    @IBOutlet weak var signoutButton: FBLoginButton!
     @IBOutlet weak var favoritesTableView: UITableView!
     
     override func viewDidLoad() {

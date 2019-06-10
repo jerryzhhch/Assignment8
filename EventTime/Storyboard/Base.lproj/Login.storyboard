@@ -82,7 +82,7 @@
                                     <action selector="googleButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29V-cm-s4E"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-mC-fKq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-mC-fKq" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="90" y="607" width="195" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -116,7 +116,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="facebookSignInButton" destination="eCo-mC-fKq" id="yTK-Le-r6X"/>
+                        <outlet property="facebookButton" destination="eCo-mC-fKq" id="wnF-dn-6Bb"/>
                         <outlet property="googleButton" destination="V7W-K0-BbK" id="00c-iI-RM9"/>
                         <outlet property="pageControl" destination="cAc-XQ-6Vq" id="5kA-Ju-krs"/>
                         <outlet property="scrollView" destination="7pK-CI-dEb" id="WCI-Rv-o5R"/>
