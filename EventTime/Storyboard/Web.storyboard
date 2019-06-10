@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="I8G-k5-EJH">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="yDT-ig-8cH" customClass="WebViewController" customModule="EventTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MNf-1j-CZH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCm-HZ-Zr8">
+                                <rect key="frame" x="96" y="168" width="169" height="57"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-ks-Wdb">
+                                        <rect key="frame" x="25" y="14" width="119" height="29"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dnO-52-OYq">
+                                                <rect key="frame" x="0.0" y="0.0" width="19.5" height="29"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoU-8G-yvU">
+                                                <rect key="frame" x="35.5" y="0.0" width="83.5" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kCm-HZ-Zr8" secondAttribute="height" multiplier="169:57" id="4f5-Lx-le2"/>
+                                    <constraint firstAttribute="height" constant="57" id="9kx-1S-HLb"/>
+                                    <constraint firstItem="p4g-ks-Wdb" firstAttribute="centerY" secondItem="kCm-HZ-Zr8" secondAttribute="centerY" id="fSY-As-eGF"/>
+                                    <constraint firstItem="p4g-ks-Wdb" firstAttribute="top" secondItem="kCm-HZ-Zr8" secondAttribute="top" constant="14" id="itQ-pA-xRk"/>
+                                    <constraint firstItem="p4g-ks-Wdb" firstAttribute="centerX" secondItem="kCm-HZ-Zr8" secondAttribute="centerX" id="oe7-J4-KV0"/>
+                                    <constraint firstItem="p4g-ks-Wdb" firstAttribute="leading" secondItem="kCm-HZ-Zr8" secondAttribute="leading" constant="25" id="xmc-ij-Lfg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kCm-HZ-Zr8" firstAttribute="leading" secondItem="mkI-GU-8IW" secondAttribute="leading" constant="96" id="DZR-cO-zfL"/>
+                            <constraint firstItem="mkI-GU-8IW" firstAttribute="trailing" secondItem="kCm-HZ-Zr8" secondAttribute="trailing" constant="110" id="e3W-63-4kR"/>
+                            <constraint firstItem="kCm-HZ-Zr8" firstAttribute="top" secondItem="mkI-GU-8IW" secondAttribute="top" constant="148" id="xCJ-4S-ovj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mkI-GU-8IW"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="dnO-52-OYq" id="M3C-AK-1W2"/>
+                        <outlet property="loadingView" destination="kCm-HZ-Zr8" id="ZwP-Dv-wxq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCO-Cb-Kki" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.200000000000003" y="44.527736131934034"/>
+        </scene>
+    </scenes>
+</document>

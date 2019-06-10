@@ -1,0 +1,6 @@
+framework module Pods_EventTime {
+  umbrella header "Pods-EventTime-umbrella.h"
+
+  export *
+  module * { export * }
+}

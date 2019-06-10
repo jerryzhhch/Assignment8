@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QV4-lq-6Mf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites View Controller-->
+        <scene sceneID="I6t-4A-p4g">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" id="H9M-kX-qGe" customClass="FavoritesViewController" customModule="EventTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2LA-0v-o7H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="221-3V-S3u">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="H9M-kX-qGe" id="Y49-nO-XZm"/>
+                                    <outlet property="delegate" destination="H9M-kX-qGe" id="kaj-sL-Iwy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tod-hh-vrc" firstAttribute="bottom" secondItem="221-3V-S3u" secondAttribute="bottom" id="JAA-g2-WGz"/>
+                            <constraint firstItem="221-3V-S3u" firstAttribute="leading" secondItem="tod-hh-vrc" secondAttribute="leading" id="bDB-aV-8o0"/>
+                            <constraint firstItem="221-3V-S3u" firstAttribute="top" secondItem="tod-hh-vrc" secondAttribute="top" id="knB-DA-VlV"/>
+                            <constraint firstItem="tod-hh-vrc" firstAttribute="trailing" secondItem="221-3V-S3u" secondAttribute="trailing" id="u3b-Lo-ktg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tod-hh-vrc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="pOJ-O8-byU"/>
+                    <navigationItem key="navigationItem" id="cEA-WV-uqL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="15Z-Lk-Z1F">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="H9M-kX-qGe" id="rLx-k3-hOf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="FnE-G4-VKP">
+                            <connections>
+                                <action selector="signOutTapped:" destination="H9M-kX-qGe" id="Phm-He-RIq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="favoritesTableView" destination="221-3V-S3u" id="IN4-bV-5KX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gpg-o6-GM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.60000000000002" y="19.340329835082461"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qGk-eP-elM">
+            <objects>
+                <navigationController storyboardIdentifier="FavoritesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="QV4-lq-6Mf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zJ0-dg-WJi">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="H9M-kX-qGe" kind="relationship" relationship="rootViewController" id="4fj-Mc-0is"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lJ-js-moQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135.19999999999999" y="18.440779610194905"/>
+        </scene>
+    </scenes>
+</document>
